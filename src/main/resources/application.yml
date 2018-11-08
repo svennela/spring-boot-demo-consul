@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: myApp
+  cloud:
+    consul:
+      host: http://consul-server.sys.pie-28-2-0.cfplatformeng.com
+      discovery:
+        healthCheckPath: /my-health-check
+        healthCheckInterval: 20s
+        enabled: true
+        instanceId: ${spring.application.name}:${random.value}
